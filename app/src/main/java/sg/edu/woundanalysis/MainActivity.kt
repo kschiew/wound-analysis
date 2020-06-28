@@ -174,7 +174,7 @@ class MainActivity : AppCompatActivity() {
         imageReader.setOnImageAvailableListener({ reader ->
             val image = reader.acquireNextImage()
             Log.d(TAG, "Image available in queue: ${image.timestamp}")
-            val depthMask = TofUtil.getDepthMask(image)
+            val depthMask = getDepthMask(image)
         }, imageReaderHandler)
     }
 
