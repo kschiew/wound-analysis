@@ -11,7 +11,7 @@ fun getDepthMask(image : Image) : Array<Int> {
     val shortDepthBuffer : ShortBuffer =
             image.getPlanes()[0].getBuffer().asShortBuffer()
 
-    val mask : Array<Int> = Array(WIDTH * HEIGHT)
+    val mask : Array<Int> = Array(WIDTH * HEIGHT, {it} )
     for (y in 0..HEIGHT) {
         for (x in 0..WIDTH) {
             val index : Int = y * WIDTH + x
